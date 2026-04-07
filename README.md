@@ -99,16 +99,12 @@ A Flutter-based mobile application designed to centralize essential tools and re
 git clone https://github.com/YOUR_USERNAME/YOUR_REPO.git
 cd YOUR_REPO
 
-### 2. Clone the repo
-
-flutter pub get
-
-### 3. Configure environment variables
+### 2. Configure environment variables
 
 GOOGLE_MAPS_KEY=your_google_maps_api_key
 OPENAI_API_KEY=your_openai_api_key
 
-### 4. Supabase Setup
+### 3. Supabase Setup
 
 In main.dart, replace with your project credentials:
 
@@ -117,6 +113,6 @@ url: 'https://YOUR_PROJECT_ID.supabase.co',
 anonKey: 'YOUR_PUBLISHABLE_KEY',
 );
 
-### 5. Run the app
+### 4. Run the app
 
 flutter run
