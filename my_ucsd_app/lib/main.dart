@@ -14,12 +14,13 @@ import 'package:flutter_dotenv/flutter_dotenv.dart';
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
-  await dotenv.load(fileName: ".env"); 
+  await dotenv.load(fileName: ".env");
 
   // Initialize Supabase
   await Supabase.initialize(
-    url: 'https://hthiasgbhpfyxgttopxg.supabase.co',
-    anonKey: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imh0aGlhc2diaHBmeXhndHRvcHhnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDQwOTg4OTIsImV4cCI6MjA1OTY3NDg5Mn0.WxmImvK76Qmsqgg_ylKxS8RgFWIGNb4Kq-0jpC8KRhA', // Replace with your Supabase Anon Key
+    url: 'https://bwcyhcbectxzrxeyqiwi.supabase.co',
+    anonKey:
+        'sb_publishable_nm4yyS-9bC5LiRak-WeITw_Qi_2fmCW', // Replace with your Supabase Anon Key
   );
 
   runApp(const MyApp());
@@ -85,11 +86,10 @@ class _MyAppState extends State<MyApp> {
       ),
       debugShowCheckedModeBanner: false,
       // Show a loading screen while determining auth state
-      home: _isLoading
-          ? const Scaffold(
-              body: Center(child: CircularProgressIndicator()),
-            )
-          : (_isLoggedIn ? const MainScreen() : const LoginPage()),
+      home:
+          _isLoading
+              ? const Scaffold(body: Center(child: CircularProgressIndicator()))
+              : (_isLoggedIn ? const MainScreen() : const LoginPage()),
     );
   }
 }
@@ -140,14 +140,8 @@ class _MainScreenState extends State<MainScreen> {
             });
           },
           items: const [
-            BottomNavigationBarItem(
-              icon: Icon(Icons.home),
-              label: 'Home',
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.map),
-              label: 'Maps',
-            ),
+            BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
+            BottomNavigationBarItem(icon: Icon(Icons.map), label: 'Maps'),
             BottomNavigationBarItem(
               icon: Icon(Icons.calendar_month),
               label: 'Calender',
@@ -156,14 +150,10 @@ class _MainScreenState extends State<MainScreen> {
               icon: Icon(Icons.smart_toy),
               label: 'TritonAI',
             ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.person),
-              label: 'Profile',
-            ),
+            BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Profile'),
           ],
         ),
       ),
     );
   }
 }
-
