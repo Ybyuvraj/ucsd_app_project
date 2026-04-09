@@ -1,4 +1,4 @@
-# 📱 UCSD App
+# 📱 UniSphere
 
 A Flutter-based mobile application designed to centralize essential tools and resources for **UC San Diego students** — including navigation, calendar access, campus info, and an AI assistant.
 
